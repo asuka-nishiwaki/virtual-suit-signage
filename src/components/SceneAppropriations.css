@@ -1,0 +1,62 @@
+.scene-appropriations h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--pop-green-dark);
+}
+
+.scene-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.scene-item {
+  background: var(--pop-green-soft);
+  border-radius: var(--pop-radius-md);
+  padding: 0.65rem 0.75rem;
+  border: 2px solid transparent;
+}
+
+.scene-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.scene-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--pop-text);
+}
+
+.suitability-badge {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--pop-radius);
+  color: var(--pop-white);
+  font-weight: 800;
+}
+
+.scene-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: var(--pop-radius);
+  overflow: hidden;
+  margin-bottom: 0.35rem;
+}
+
+.scene-bar-fill {
+  height: 100%;
+  border-radius: var(--pop-radius);
+  transition: width 0.4s ease;
+}
+
+.scene-description {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--pop-text-muted);
+  line-height: 1.4;
+  font-weight: 600;
+}

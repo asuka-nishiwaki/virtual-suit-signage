@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap');
+
+:root {
+  --pop-white: #ffffff;
+  --pop-bg: #fff9fc;
+  --pop-bg-soft: #f5fff8;
+  --pop-text: #2d2d2d;
+  --pop-text-muted: #666666;
+  --pop-pink: #ff1493;
+  --pop-pink-light: #ff69b4;
+  --pop-pink-soft: rgba(255, 20, 147, 0.12);
+  --pop-green: #39ff14;
+  --pop-green-dark: #00cc66;
+  --pop-green-soft: rgba(57, 255, 20, 0.15);
+  --pop-shadow: 0 8px 24px rgba(255, 20, 147, 0.15);
+  --pop-radius: 999px;
+  --pop-radius-md: 20px;
+  --pop-font: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', 'Yu Gothic UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--pop-bg);
+  color: var(--pop-text);
+  font-family: var(--pop-font);
+  font-size: 17px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+/* Shared POP buttons */
+.pop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1rem 2rem;
+  font-family: var(--pop-font);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  border: 3px solid var(--pop-pink);
+  border-radius: var(--pop-radius);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pop-btn--pink {
+  background: linear-gradient(135deg, var(--pop-pink) 0%, var(--pop-pink-light) 100%);
+  color: var(--pop-white);
+  box-shadow: 0 6px 0 #cc1075, var(--pop-shadow);
+}
+
+.pop-btn--pink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 #cc1075, 0 12px 28px rgba(255, 20, 147, 0.35);
+}
+
+.pop-btn--green {
+  background: linear-gradient(135deg, var(--pop-green-dark) 0%, var(--pop-green) 100%);
+  color: var(--pop-text);
+  border-color: var(--pop-green-dark);
+  box-shadow: 0 6px 0 #009955, 0 8px 20px rgba(57, 255, 20, 0.25);
+}
+
+.pop-btn--green:hover {
+  transform: translateY(-2px);
+}
+
+.pop-btn--outline {
+  background: var(--pop-white);
+  color: var(--pop-pink);
+  box-shadow: 0 4px 0 rgba(255, 20, 147, 0.25);
+}
+
+.pop-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}

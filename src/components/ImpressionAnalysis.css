@@ -1,0 +1,59 @@
+.impression-analysis h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--pop-pink);
+}
+
+.impression-tags {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.impression-tag {
+  background: var(--pop-pink-soft);
+  border: 2px solid var(--pop-pink);
+  color: var(--pop-pink);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--pop-radius);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.impression-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.impression-item {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr 2.5rem;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--pop-text);
+  font-weight: 600;
+}
+
+.bar-container {
+  height: 8px;
+  background: var(--pop-pink-soft);
+  border-radius: var(--pop-radius);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--pop-pink), var(--pop-pink-light));
+  border-radius: var(--pop-radius);
+  transition: width 0.4s ease;
+}
+
+.percentage {
+  text-align: right;
+  color: var(--pop-pink);
+  font-weight: 800;
+}

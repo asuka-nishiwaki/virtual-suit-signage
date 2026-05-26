@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 10% 10%, var(--pop-pink-soft) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, var(--pop-green-soft) 0%, transparent 40%),
+    var(--pop-bg);
+}
+
+.app-header {
+  padding: 1.25rem 1rem 0.75rem;
+  flex-shrink: 0;
+}
+
+.app-brand {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--pop-pink);
+  margin: 0 0 0.5rem;
+  font-weight: 800;
+}
+
+.app-header h1 {
+  font-size: clamp(1.4rem, 4.5vw, 2rem);
+  font-weight: 800;
+  margin: 0;
+  color: var(--pop-text);
+}
+
+.app-subtitle {
+  font-size: clamp(0.95rem, 3vw, 1.15rem);
+  color: var(--pop-green-dark);
+  margin: 0.5rem 0 0;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+.camera-section {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0 0 1rem;
+}
+
+@media (orientation: portrait) {
+  .App {
+    min-height: 100dvh;
+  }
+
+  .app-header {
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .camera-section {
+    padding: 0;
+    align-items: stretch;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .camera-section {
+    max-width: calc((100vh - 5rem) * 9 / 16);
+  }
+}

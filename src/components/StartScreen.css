@@ -1,0 +1,55 @@
+.start-screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 30% 20%, var(--pop-pink-soft) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, var(--pop-green-soft) 0%, transparent 50%),
+    var(--pop-white);
+}
+
+.start-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.start-brand {
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  color: var(--pop-pink);
+  margin: 0 0 1.25rem;
+  font-weight: 800;
+}
+
+.start-title {
+  font-size: clamp(2.2rem, 8vw, 3.4rem);
+  font-weight: 800;
+  color: var(--pop-text);
+  margin: 0 0 1rem;
+  line-height: 1.25;
+  text-shadow: 3px 3px 0 var(--pop-pink-soft);
+}
+
+.start-subtitle {
+  font-size: clamp(1.1rem, 3.5vw, 1.45rem);
+  color: var(--pop-green-dark);
+  margin: 0 0 1.5rem;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.start-desc {
+  font-size: 1.05rem;
+  color: var(--pop-text-muted);
+  line-height: 1.8;
+  margin: 0 0 2.5rem;
+  font-weight: 500;
+}
+
+.start-btn {
+  font-size: 1.2rem;
+  padding: 1.15rem 3rem;
+}
