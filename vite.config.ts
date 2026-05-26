@@ -7,16 +7,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [react()],
   define: {
     global: 'globalThis',
   },
   resolve: {
     alias: [
-      {
-        find: '@mediapipe/pose/pose.js',
-        replacement: path.resolve(__dirname, 'node_modules/@mediapipe/pose/pose.js'),
-      },
       {
         find: '@mediapipe/pose',
         replacement: path.resolve(__dirname, 'src/shims/mediapipe-pose.ts'),

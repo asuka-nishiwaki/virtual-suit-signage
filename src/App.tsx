@@ -1,6 +1,11 @@
-import { useCallback, useEffect, useState } from 'react';
-import { PoseEstimation } from './components/PoseEstimation';
+import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 import type { ScanPayload, CaptureData } from './components/PoseEstimation';
+
+const PoseEstimation = lazy(() =>
+  import('./components/PoseEstimation').then((module) => ({
+    default: module.PoseEstimation,
+  })),
+);
 import {
   DiagnosisResult,
   isValidDiagnosisData,
@@ -108,11 +113,13 @@ function App() {
             <p className="app-subtitle">客観的バーチャル試着体験：絶対にスーツ選びに失敗しない</p>
           </header>
           <div className="camera-section">
-            <PoseEstimation
-              key={scanKey}
-              onDiagnosisComplete={handleDiagnose}
-              isAnalyzing={loading}
-            />
+            <Suspense fallback={<p className="scan-loading">カメラを準備しています…</p>}>
+              <PoseEstimation
+                key={scanKey}
+                onDiagnosisComplete={handleDiagnose}
+                isAnalyzing={loading}
+              />
+            </Suspense>
           </div>
         </>
       )}
