@@ -5,9 +5,10 @@ import react from '@vitejs/plugin-react'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+// GitHub Pages（プロジェクトサイト）: VITE_BASE_PATH=/virtual-suit-signage/
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  base: process.env.VITE_BASE_PATH ?? '/',
   plugins: [react()],
   define: {
     global: 'globalThis',
