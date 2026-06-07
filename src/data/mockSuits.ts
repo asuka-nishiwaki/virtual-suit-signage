@@ -1,3 +1,5 @@
+import { assetUrl } from '../utils/assetUrl';
+
 export interface SuitColorVariant {
   id: string;
   name: string;
@@ -47,7 +49,7 @@ export const MOCK_SUITS: MockSuit[] = [
     matchBase: 96,
     description: '柔らかなグレーで誠実な印象。ビジネスシーンの定番。',
     textures: {
-      sheet: '/assets/suits/suit-001-sheet.png',
+      sheet: assetUrl('assets/suits/suit-001-sheet.png'),
       sheetCols: 3,
       tintHex: null,
       directions: { 0: { col: 1 }, 90: { col: 0 }, 180: { col: 2 }, 270: { col: 0, flipH: true } },
@@ -69,7 +71,7 @@ export const MOCK_SUITS: MockSuit[] = [
     matchBase: 92,
     description: '動きやすいパンツスーツ。シャープで知的な印象。',
     textures: {
-      sheet: '/assets/suits/suit-002-sheet.png',
+      sheet: assetUrl('assets/suits/suit-002-sheet.png'),
       sheetCols: 5,
       tintHex: null,
       directions: { 0: { col: 4 }, 90: { col: 2 }, 180: { col: 3 }, 270: { col: 1 } },
@@ -91,7 +93,7 @@ export const MOCK_SUITS: MockSuit[] = [
     matchBase: 88,
     description: '上質ウールのライトグレー。若々しく華やかな印象。',
     textures: {
-      sheet: '/assets/suits/suit-003-sheet.png',
+      sheet: assetUrl('assets/suits/suit-003-sheet.png'),
       sheetCols: 5,
       tintHex: null,
       directions: { 0: { col: 2 }, 90: { col: 4 }, 180: { col: 1 }, 270: { col: 0 } },
@@ -113,7 +115,7 @@ export const MOCK_SUITS: MockSuit[] = [
     matchBase: 90,
     description: 'ベスト付き3ピース。格式高く誠実な印象。',
     textures: {
-      sheet: '/assets/suits/suit-004-sheet.png',
+      sheet: assetUrl('assets/suits/suit-004-sheet.png'),
       sheetCols: 4,
       tintHex: null,
       directions: { 0: { col: 1 }, 90: { col: 3 }, 180: { col: 2 }, 270: { col: 0 } },
@@ -135,7 +137,7 @@ export const MOCK_SUITS: MockSuit[] = [
     matchBase: 94,
     description: 'モダンなシルエット。華やかさとシャープさを両立。',
     textures: {
-      sheet: '/assets/suits/suit-005-sheet.png',
+      sheet: assetUrl('assets/suits/suit-005-sheet.png'),
       sheetCols: 5,
       tintHex: null,
       directions: { 0: { col: 2 }, 90: { col: 4 }, 180: { col: 3 }, 270: { col: 0 } },

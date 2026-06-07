@@ -1,4 +1,5 @@
 import React from 'react';
+import { assetUrl } from '../utils/assetUrl';
 import './LightingControl.css';
 
 export type BackgroundId = 'outdoor' | 'office' | 'hotel' | 'meeting';
@@ -10,22 +11,22 @@ export const BACKGROUND_PRESETS: Record<
 > = {
   outdoor: {
     label: '屋外（ビル街）',
-    imageUrl: '/assets/backgrounds/outdoor.jpg',
+    imageUrl: assetUrl('assets/backgrounds/outdoor.jpg'),
     fallback: 'linear-gradient(180deg, #87ceeb 0%, #708090 100%)',
   },
   office: {
     label: 'オフィス',
-    imageUrl: '/assets/backgrounds/office.jpg',
+    imageUrl: assetUrl('assets/backgrounds/office.jpg'),
     fallback: 'linear-gradient(180deg, #e8e8e8 0%, #a0a0a0 100%)',
   },
   hotel: {
     label: 'ホテルロビー',
-    imageUrl: '/assets/backgrounds/hotel.jpg',
+    imageUrl: assetUrl('assets/backgrounds/hotel.jpg'),
     fallback: 'linear-gradient(180deg, #4a4035 0%, #1a1612 100%)',
   },
   meeting: {
     label: '会議室',
-    imageUrl: '/assets/backgrounds/meeting.jpg',
+    imageUrl: assetUrl('assets/backgrounds/meeting.jpg'),
     fallback: 'linear-gradient(180deg, #f0f4f8 0%, #b8c5d0 100%)',
   },
 };
