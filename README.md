@@ -194,12 +194,5 @@ npm.cmd run dev
 
 ---
 
-## 提出チェックリスト
 
-- `npm run build` がエラーなく通る
-- `main` へ push・デプロイ成功
-- 公開 URL で体験確認
-- `README.md` 更新済み
-- AI ログ 3 件を `_docs/ai_logs/` に配置済み
 
-詳細は [ASSIGNMENT.md](ASSIGNMENT.md) を参照してください。
